@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<bean id="cla" class="com.nt.beans.ClassA" scope="singleton">
+<constructor-arg name="classb">
+<bean id="clb" class="com.nt.beans.ClassB" scope="prototype">
+</bean>
+</constructor-arg>
+<property name="ravi" ref="rv"></property>
+<property name="classC" ref="clc"></property>
+</bean>
+
+<bean id="clf" class="com.nt.beans.ClassF">
+<property name="ravi" ref="rv"></property>
+<property name="classC" ref="clc"></property>
+</bean>
+
+<!-- <bean id="clb" class="com.nt.beans.ClassB"/> -->
+<bean id="rv" class="com.nt.beans.Ravi"/>
+<bean id="clc" class="com.nt.beans.ClassC"/>
+
+</beans>
