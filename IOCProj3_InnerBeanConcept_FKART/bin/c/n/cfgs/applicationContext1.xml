@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+<bean id="dtdc" class="c.n.depends.Dtdc"></bean>
+<bean id="fFlight" class="c.n.depends.First_Flight"></bean>
+<bean id="sCourier" class="c.n.depends.SaiCourier"></bean>
+<bean id="blueDart" class="c.n.depends.BlueDart"></bean>
+
+<bean id="krn" class="c.n.target.Kiran">
+
+<constructor-arg name="courier" ref="sCourier"></constructor-arg>
+</bean>
+
+</beans>
