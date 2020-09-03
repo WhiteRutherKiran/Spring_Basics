@@ -5,7 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.nt.beans.Student1;
 
-public class ArrayInjectionTest {
+public class List_Injection_Test {
 	public static void main(String[] args) {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("com/nt/cfgs/applicationContext.xml");
 		Student1 st= ctx.getBean(Student1.class);
