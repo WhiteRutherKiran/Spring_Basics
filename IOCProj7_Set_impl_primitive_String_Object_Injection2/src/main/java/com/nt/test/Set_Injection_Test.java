@@ -7,6 +7,7 @@ import com.nt.beans.Student1;
 
 public class Set_Injection_Test {
 	public static void main(String[] args) {
+		//load container
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("com/nt/cfgs/applicationContext.xml");
 		Student1 st= ctx.getBean(Student1.class);
 	//	Student1 st1= ctx.getBean("std",Student1.class);
