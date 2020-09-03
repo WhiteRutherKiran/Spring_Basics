@@ -7,6 +7,8 @@
 <bean id="cla" class="com.nt.beans.ClassA" scope="singleton">
 <constructor-arg name="classb">
 <bean id="clb" class="com.nt.beans.ClassB" scope="prototype">
+<!-- having innerbean id is optional -->
+<!-- <bean  class="com.nt.beans.ClassB" scope="prototype"> -->
 </bean>
 </constructor-arg>
 <property name="ravi" ref="rv"></property>
