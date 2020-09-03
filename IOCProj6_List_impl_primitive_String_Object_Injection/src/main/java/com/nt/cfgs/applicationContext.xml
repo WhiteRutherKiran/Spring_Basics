@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="std" class="com.nt.beans.Student1">
+<constructor-arg name="emp">
+<list>
+<ref bean="emp1"/>
+<ref bean="emp2"/>
+</list>
+</constructor-arg>
+<property name="colors">
+<list>
+<value>red</value>
+<value>blue</value>
+<value>block</value>
+</list>
+</property>
+<property name="rank">
+<list>
+<value>10</value>
+<value>2</value>
+<value>5</value>
+</list>
+</property>
+</bean>
+
+<bean id="emp1" class="com.nt.beans.Employee">
+<property name="hno" value="170"></property>
+<property name="name" value="kiran"></property>
+<property name="addr" value="hyd"></property>
+<property name="postal" value="170507"></property>
+</bean>
+
+<bean id="emp2" class="com.nt.beans.Employee">
+<property name="hno" value="111"></property>
+<property name="name" value="kirannnnnn"></property>
+<property name="addr" value="hydnnnnn"></property>
+<property name="postal" value="1705056457"></property>
+</bean>
+</beans>
