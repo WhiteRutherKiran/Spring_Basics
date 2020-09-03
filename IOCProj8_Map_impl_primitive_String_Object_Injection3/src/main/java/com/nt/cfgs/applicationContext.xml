@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="std" class="com.nt.beans.Student1">
+<constructor-arg name="deatails">
+<map>
+<entry key-ref="emp1" value-ref="dep1"/>
+<entry key-ref="emp2" value-ref="dep2"/>
+</map>
+</constructor-arg>
+
+<property name="colors">
+<map>
+<!-- one type injection -->
+<entry>
+<key><value>banana</value></key>
+<value>yellow</value>
+</entry>
+<!-- another type injection -->
+<entry key="apple" value="red"/>
+<!-- one more type -->
+<entry key="jama">
+<value>Green</value>
+</entry>
+</map>
+</property>
+
+<property name="rank">
+<map>
+<entry key="1" value="sai"/>
+<entry key="2" value="manish"/>
+<entry key="3" value="raj"/>
+</map>
+</property>
+</bean>
+
+<bean id="emp1" class="com.nt.beans.Employee">
+<property name="hno" value="170"></property>
+<property name="name" value="kiran"></property>
+<property name="addr" value="hyd"></property>
+<property name="postal" value="170507"></property>
+</bean>
+
+<bean id="emp2" class="com.nt.beans.Employee">
+<property name="hno" value="111"></property>
+<property name="name" value="kirannnnnn"></property>
+<property name="addr" value="hydnnnnn"></property>
+<property name="postal" value="1705056457"></property>
+</bean>
+
+<!-- for department bean -->
+<bean id="dep1" class="com.nt.beans.Department">
+<property name="cardno" value="101"></property>
+<property name="deptname" value="ece"></property>
+<property name="position" value="manager"></property>
+</bean>
+
+<bean id="dep2" class="com.nt.beans.Department">
+<property name="cardno" value="1010"></property>
+<property name="deptname" value="eee"></property>
+<property name="position" value="clerk"></property>
+</bean>
+</beans>
