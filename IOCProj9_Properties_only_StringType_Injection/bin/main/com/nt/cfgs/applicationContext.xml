@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="std" class="com.nt.beans.Student1">
+<property name="propes">
+<props>
+	<prop key="sai">1000</prop>
+	<prop key="vgn">2000</prop>
+	<prop key="krn">3000</prop>
+	<prop key="akil">4000</prop>
+	<prop key="yml">5000</prop>
+</props>
+</property>
+</bean>
+</beans>
