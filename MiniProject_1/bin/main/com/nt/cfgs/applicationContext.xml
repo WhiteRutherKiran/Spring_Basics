@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- datasource cfg -->
+
+<bean id="hkcp" class="com.zaxxer.hikari.HikariDataSource">
+<property name="jdbcUrl" value="jdbc:mysql:///spring_assignments"></property>
+<property name="username" value="root"></property>
+<property name="password" value="kiran"></property>
+</bean>
+<!-- dao injection using datasource -->
+<bean id="dao" class="com.nt.dao.StudentDAOImpl">
+<constructor-arg name="dt" ref="hkcp"></constructor-arg>
+</bean>
+
+<!-- service class inject dao -->
+<bean id="service" class="com.nt.service.StudentServiceImpl">
+<constructor-arg name="dao" ref="dao"></constructor-arg>
+</bean>
+
+</beans>
