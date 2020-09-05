@@ -17,7 +17,7 @@ public class Test {
 		service =ctx.getBean(StudentService.class);
 		
 		try {
-			dto.setName("shaik");
+			dto.setName("singer");
 			dto.setCourse("NETWORK");
 			dto.setFee(1900.0);
 			
