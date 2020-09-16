@@ -3,7 +3,29 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<bean id="std" class="com.nt.beans.Student1">
+<bean  id="st" class="com.nt.beans.Student1" abstract="true">
+<property name="propes">
+<props>
+	<prop key="sai">1000</prop>
+	<prop key="vgn">2000</prop>
+	<prop key="krn">3000</prop>
+	<prop key="akil">4000</prop>
+	<prop key="yml">5000</prop>
+</props>
+</property>
+</bean>
+<bean  class="com.nt.beans.Student1" parent="st">
+<property name="propes">
+<props>
+	<prop key="sai">1000</prop>
+	<prop key="vgn">2000</prop>
+	<prop key="krn">3000</prop>
+	<prop key="akil">4000</prop>
+	<prop key="yml">5000</prop>
+</props>
+</property>
+</bean>
+<bean  class="com.nt.beans.Student1" parent="st">
 <property name="propes">
 <props>
 	<prop key="sai">1000</prop>
