@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id = "entity" class="com.nt.entity.EntityClass" init-method="inti" destroy-method="des">
+<property name="cno" value="10"></property>
+<property name="cname" value="sai"></property>
+<property  ref="dept" name="dept"></property>
+</bean>
+<bean id = "dept" class="com.nt.entity.Department" >
+<property name="dob" ref="dob"></property>
+<property name="dos" ref="dos"></property>
+</bean>
+<bean id="dob" class="java.util.Date">
+<property name="date" value="10"></property>
+<property name="month" value="10"></property>
+<property name="year" value="10"></property>
+</bean>
+
+<bean id="dos" class="java.util.Date">
+<property name="date" value="20"></property>
+<property name="month" value="5"></property>
+<property name="year" value="100"></property>
+</bean>
+
+</beans>
